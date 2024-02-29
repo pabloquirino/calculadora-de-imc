@@ -20,7 +20,7 @@
         </section>
 
         <section class="flex flex-col gap-8 p-8 rounded-3xl bg-blue-300 bg-opacity-60 font-arial font-semibold">
-            <form class="flex flex-col gap-8" action="#">
+            <form class="flex flex-col gap-8" id="form" action="#">
                 <h1 class="text-3xl">Calculadora de IMC</h1>
                 <span class="w-24 h-3px bg-purple-600 absolute mt-9 rounded-full"></span>
 
@@ -28,7 +28,7 @@
                     <label class="label" for="weight">Peso em Kg</label>
                     <div class="relative">
                         <i class="fa-solid fa-weight-hanging absolute p-3"></i>
-                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none" type="number" id="weight" required>
+                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none" type="tel" id="weight" placeholder="Ex.: 70,2" required maxlength="4">
                         <span class="span">Kg</span>
                     </div>
                 </div>
@@ -37,20 +37,20 @@
                     <label class="label" for="height">Altura em metros</label>
                     <div class="relative">
                         <i class="fa-solid fa-ruler absolute p-3"></i>
-                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none" type="number" id="height" required>
+                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none" type="tel" id="height" placeholder="Ex.: 1,70" required maxlength="4">
                         <span class="span">m</span>
                     </div>
                 </div>
 
-                <button id="calculate" class="bg-purple-600 h-10 text-white text-lg rounded-md hover:bg-purple-700">Calcular</button>
+                <button class="bg-purple-600 h-10 text-white text-lg rounded-md hover:bg-purple-700">Calcular</button>
             </form>
 
-            <div class="border-t-2 pt-5 hidden">
+            <div id="info" class="border-t-2 pt-5 hidden">
                 <div>
-                    <p class="text-sm">Seu IMC <span class="text-2xl border-b-2 border-purple-600" id="value"></span></p>
+                    <p class="text-sm">Seu IMC é <span class="text-2xl border-b-2 border-purple-600" id="value"></span><span id="answer"></span></p>
                 </div>
 
-                <div class="text-center text-purple-600 text-sm underline mt-5">
+                <div class="text-center text-purple-600 hover:text-purple-700 text-sm hover:underline mt-5">
                     <a href="https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal">Mais informações sobre o IMC</a>
                     <i class="fa-solid fa-link"></i>
                 </div>
@@ -61,6 +61,5 @@
     </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>
