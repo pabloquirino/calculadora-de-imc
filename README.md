@@ -37,3 +37,7 @@ https://pabloquirino.github.io/calculadora-de-imc/src/
 ### Captura de tela:
  ![PrintScreen do projeto](./readme/img-readme.png) 
 
+### Dark mode:
+ ![PrintScreen do projeto](./readme/img-readme2.png) 
+
+
