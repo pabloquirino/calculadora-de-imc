@@ -35,5 +35,5 @@
 https://pabloquirino.github.io/calculadora-de-imc/src/
 
 ### Captura de tela:
- ![PrintScreen do projeto](./img.readme/spotify.png) 
+ ![PrintScreen do projeto](./readme/img-readme.png) 
 
