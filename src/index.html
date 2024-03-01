@@ -13,22 +13,27 @@
         }
     </style>
 </head>
-<body class="bg-blue-50 w-full h-screen flex items-center justify-center"> 
+<body class="bg-blue-50 dark:bg-body w-full h-screen flex items-center justify-center"> 
+    <div class="hidden lg:block absolute top-7" id="btn">
+        <input class="w-16 h-7 bg-gray-200 dark:bg-green-200 ring-1 ring-gray-700 dark:ring-green-700 rounded-full cursor-pointer" type="button"><span class="text-xs select-none dark:text-green-700">darkmode</span>
+        <div class="absolute inset-y-2px left-1 dark:translate-x-8 duration-300 ease-out w-6 h-6 rounded-full bg-gray-700 dark:bg-green-700 cursor-pointer"></div>
+    </div>
+
     <main class="flex items-center gap-14">
         <section class="hidden lg:block lg:w-500px">
-            <img src="../img/gym.svg" alt="personal-trainer">
+            <img id="img" src="../img/gym.svg" alt="personal-trainer">
         </section>
 
-        <section class="flex flex-col gap-8 p-8 rounded-3xl bg-blue-300 bg-opacity-60 font-arial font-semibold">
+        <section class="flex flex-col gap-8 p-8 rounded-3xl bg-blue-300 dark:bg-card bg-opacity-60 font-arial font-semibold dark:text-white">
             <form class="flex flex-col gap-8" id="form" action="#">
                 <h1 class="text-3xl">Calculadora de IMC</h1>
-                <span class="w-24 h-3px bg-purple-600 absolute mt-9 rounded-full"></span>
+                <span class="w-24 h-3px bg-purple-600 dark:bg-green-600 absolute mt-9 rounded-full"></span>
 
                 <div>
                     <label class="label" for="weight">Peso em Kg</label>
                     <div class="relative">
                         <i class="fa-solid fa-weight-hanging absolute p-3"></i>
-                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none" type="tel" id="weight" placeholder="Ex.: 70,2" required maxlength="4">
+                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none dark:bg-input dark:focus:bg-input" type="tel" id="weight" placeholder="Ex.: 70,2" required maxlength="4" autocomplete="off">
                         <span class="span">Kg</span>
                     </div>
                 </div>
@@ -37,12 +42,12 @@
                     <label class="label" for="height">Altura em metros</label>
                     <div class="relative">
                         <i class="fa-solid fa-ruler absolute p-3"></i>
-                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none" type="tel" id="height" placeholder="Ex.: 1,70" required maxlength="4">
+                        <input class="w-full h-10 pl-10 pr-10 rounded-md outline-none dark:bg-input dark:focus:bg-input" type="tel" id="height" placeholder="Ex.: 1,70" required maxlength="4" autocomplete="off">
                         <span class="span">m</span>
                     </div>
                 </div>
 
-                <button class="bg-purple-600 h-10 text-white text-lg rounded-md hover:bg-purple-700">Calcular</button>
+                <button class="bg-purple-600 dark:bg-green-600 h-10 text-white text-lg rounded-md hover:bg-purple-700 dark:hover:bg-green-700">Calcular</button>
             </form>
 
             <div id="info" class="border-t-2 pt-5 hidden">
@@ -50,7 +55,7 @@
                     <p class="text-sm">Seu IMC é <span class="text-2xl border-b-2 border-purple-600" id="value"></span><span id="answer"></span></p>
                 </div>
 
-                <div class="text-center text-purple-600 hover:text-purple-700 text-sm hover:underline mt-5">
+                <div class="text-center text-purple-600 dark:text-green-600 hover:text-purple-700 dark:hover:text-green-700 text-sm hover:underline mt-5">
                     <a href="https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal">Mais informações sobre o IMC</a>
                     <i class="fa-solid fa-link"></i>
                 </div>

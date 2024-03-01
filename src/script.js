@@ -42,3 +42,19 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#info').classList.remove('hidden')
 })
 
+const btn = document.querySelector("#btn")
+const html = document.querySelector("html")
+
+const img = document.querySelector('#img')
+let indiceAtual = 0
+let foto = [`../img/gym.svg`, `../img/gym.png`]
+
+btn.addEventListener('click', function() {
+
+    indiceAtual = 1 - indiceAtual
+
+    img.src = foto[indiceAtual] 
+
+    html.classList.toggle('dark')
+})
+
