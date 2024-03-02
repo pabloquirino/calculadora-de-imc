@@ -42,6 +42,7 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#info').classList.remove('hidden')
 })
 
+//darkmode
 const btn = document.querySelector("#btn")
 const html = document.querySelector("html")
 
@@ -58,3 +59,20 @@ btn.addEventListener('click', function() {
     html.classList.toggle('dark')
 })
 
+// vírgula automática no input height
+const heightInput = document.querySelector('#height')
+
+heightInput.addEventListener('input', function() {
+    
+    let valor = this.value
+
+    if (valor.length > 1) {
+
+        if (!valor.includes(',')) {
+           
+            valor = valor.replace(/^(\d{1})/, '$1,')
+
+            this.value = valor // atualiza o campo de entrada com o novo valor
+        }
+    }
+})
